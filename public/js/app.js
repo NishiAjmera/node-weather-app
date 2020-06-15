@@ -8,7 +8,7 @@ msg1.textContent= 'loading weather';
 document.addEventListener('submit', (e)=>{
     e.preventDefault();
     const address = search.value;
-    const url = 'http://localhost:3002/weather?address=' + address;
+    const url = '/weather?address=' + address;
 
     fetch(url).then((res) => {
         res.json().then((data) => {
